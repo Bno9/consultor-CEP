@@ -6,6 +6,7 @@ function apagar (){
             document.getElementById('bairro').value = "";
             document.getElementById('localidade').value = "";
             document.getElementById('numero').value = "";
+            
 }
 
 
@@ -16,6 +17,7 @@ document.getElementById("cep").addEventListener("blur", (evento) => {
     if(cepInformado.length == 8){
         localStorage.setItem("cep2", cepInformado);
     }   else {
+        localStorage.removeItem("cep2");
         apagar()
     }
 
